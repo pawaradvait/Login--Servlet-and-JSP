@@ -6,6 +6,7 @@ public class LoginDao {
 
 	String sql ="select * from login where username=? and password=?";
 	String insert = "insert into login values(?,?)";
+	
 	public boolean check(String username,String password)  {
 		try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
@@ -44,5 +45,7 @@ public class LoginDao {
 		
 		return false;
 	}
+	
+
 	
 }

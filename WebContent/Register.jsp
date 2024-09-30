@@ -5,6 +5,17 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<%
+ if(session.getAttribute("not_valid") != null){
+	 out.print(session.getAttribute("not_valid"));
+ }
+
+if(session.getAttribute("userexist") !=null){
+	out.print("user already exist");
+}
+
+%>
 <form action="register" method="post">
 Username:
 <input type="text" name="username" id="username">
